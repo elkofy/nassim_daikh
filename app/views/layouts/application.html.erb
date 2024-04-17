@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pantry2</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="dark:bg-gray-800 dark:border-gray-700 dark:text-white">
+    <main class="container mx-auto mt-8">
+    <nav class="flex flex-row items-center gap-2 mb-8">
+      <img class="w-24 h-24 rounded-full" src="https://media.discordapp.net/attachments/783302018168651837/1229479584169332878/51ttqdI-fiL.png?ex=662fd517&is=661d6017&hm=131ae00a4c50439e076733dd40a4a1e9660b99e8dbc275d0d624ca900e8830ed&=&format=webp&quality=lossless&width=572&height=572" alt="Rounded avatar">
+        <%= link_to "MyCookingSkills", "/",class: "text-4xl font-bold" %>
+  
+    </nav>
+
+      <%= yield %>
+    </main>
+  </body>
+</html>

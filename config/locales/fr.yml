@@ -1,0 +1,13 @@
+fr:
+  new_ingredient: "Nouvel Ingredient"
+  search_by_name: "Cherchez par nom"
+  name: "Nom"
+  back_to_ingredients: "Retour aux ingredients"
+  save_ingredient: "Enregistrez l'ingredient"
+  edit_ingredient: "Modifiez l'ingredient"
+  destroy_ingredient: "Supprimer l'ingredient"
+  show_to_ingredient: "Voir l'ingrédient"
+  helpers:
+    label:
+      ingredient:
+        name: "Nom"

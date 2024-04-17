@@ -1,0 +1,32 @@
+<%= form_with model: @recipe do |recipe_form| %>
+  <% if @recipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+      <ul>
+      <% @recipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<form class="max-w-sm mx-auto">
+<div class="mb-5">
+    <%= recipe_form.label :title, class:"block mb-2 text-sm font-medium text-gray-900 dark:text-white" %>
+    <%= recipe_form.text_field :title, class:"bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" %>
+  </div>
+
+  <h2 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Add Ingredients</h2>
+  <div id="recipeIngredients">
+    <%= recipe_form.fields_for :recipe_ingredients do |recipe_ingredient_form| %>
+      <%= render "recipe_ingredient_fields", f: recipe_ingredient_form %>
+    <% end %>
+    <div class>
+      <%= link_to_add_association 'Add ➕', recipe_form, :recipe_ingredients, wrap_object: Proc.new { |recipe_ingredient| recipe_ingredient.build_ingredient; recipe_ingredient }, class:"text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" %>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <%= recipe_form.submit "Save Recipe", class: "text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" %>
+  </form>
+<% end %>
