@@ -48,7 +48,6 @@ class IngredientsController < ApplicationController
   end
 
   def search
-    logger.debug "search_params: #{params[:search]}"
     @ingredients = Ingredient.where("name LIKE ?", "%#{params[:search]}%").order(created_at: :desc)
     respond_to do |format|
       format.json { render json: render_to_string(partial: 'ingredients/ingredient', collection: @ingredients, formats: [:html])}

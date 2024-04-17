@@ -5,9 +5,7 @@ export default class extends Controller {
   static targets = ["params"]
   
   search(event) {
-    console.log('searching...')
-    const value = this.paramsTarget.value
-    console.log('searching...')
+    const value = this.paramsTarget.value;
 
     fetch(`ingredients/search?search=${value}`, {
       headers: {
