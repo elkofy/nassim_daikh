@@ -1,3 +1,12 @@
+# == Schema Information
+#
+# Table name: recipes
+#
+#  id         :integer          not null, primary key
+#  title      :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 class Recipe < ApplicationRecord
     has_many :recipe_ingredients, dependent: :delete_all
     has_many :ingredients, through: :recipe_ingredients
