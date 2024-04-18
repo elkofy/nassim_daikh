@@ -28,5 +28,31 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  new_ingredient: "New Ingredient"
   search_by_name: "Search by name"
+  name: "Name"
+  ingredients: "Ingredients"
+  add_ingredients: "Add ingredients"
+  back_to_ingredients: "Back to ingredients"
+  save_ingredient: "Save ingredient"
+  edit_ingredient: "Edit ingredient"
+  destroy_ingredient: "Delete ingredient"
+  show_to_ingredient: "Show ingredient"
+  recipes: "Recipes"
+  back_to_recipes: "Back to recipes"
+  save_recipe: "Save recipe"
+  new_recipe: "New recipe"
+  edit_recipe: "Edit recipe"
+  destroy_recipe: "Delete recipe"
+  read_more: "Read more"
+  edit: "Edit"
+  remove: "Remove"
+  add: "Add"
+  helpers:
+    label:
+      ingredient:
+        name: "Name"
+        description: "Description"
+        amount: "Amount"
+      recipe:
+        title: "Title"
